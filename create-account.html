@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up - Oma's Cafe</title>
+<style>
+body { margin: 0; font-family: Arial, sans-serif; background: #f0f0f0 url('https://images.unsplash.com/photo-1511690743693-d2a5408a88ca?w=1280') no-repeat center center fixed; background-size: cover; }
+.container { max-width: 400px; margin: 50px auto; padding: 20px; background: rgba(255, 255, 255, 0.9); border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+h2 { text-align: center; margin-bottom: 20px; }
+label { display: block; margin-bottom: 5px; }
+input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+button { width: 100%; padding: 10px; background: #8D4E31; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+a { color: #8D4E31; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Sign Up for Oma's Cafe</h2>
+  <form>
+    <label>Full Name</label>
+    <input type="text" placeholder="Your name">
+    <label>Email</label>
+    <input type="email" placeholder="your.email@example.com">
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+    <label>Phone Number</label>
+    <input type="tel" placeholder="+234 123 456 7890">
+    <button type="submit">Create Account</button>
+  </form>
+  <p style="text-align: center; margin-top: 15px;">Already have an account? <a href="login.html">Login</a></p>
+</div>
+<script>
+document.querySelector('form').onsubmit = function(e) {
+  e.preventDefault();
+  var name = document.querySelector('input[type="text"]').value;
+  var email = document.querySelector('input[type="email"]').value;
+  var pwd = document.querySelector('input[type="password"]').value;
+  var phone = document.querySelector('input[type="tel"]').value;
+  if (name && email && pwd && phone) {
+    alert('Account created!');
+    window.location.href = 'login.html';
+  } else {
+    alert('Fill in all fields');
+  }
+};
+</script>
+</body>
+</html>

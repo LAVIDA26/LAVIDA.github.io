@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oma's Cafe</title>
+<style>
+body { margin: 0; font-family: Arial, sans-serif; }
+header { position: fixed; top: 0; left: 0; right: 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 50; }
+.container { max-width: 1200px; margin: auto; padding: 0 15px; }
+.logo { font-size: 28px; color: #8D4E31; font-family: 'Georgia', serif; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: #333; font-weight: 500; }
+nav a:hover { color: #8D4E31; }
+.social img { max-width: 24px; height: auto; vertical-align: middle; margin-left: 10px; }
+.hamburger { display: none; font-size: 20px; cursor: pointer; }
+.hero { position: relative; margin-top: 60px; height: 500px; }
+.slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; background-size: cover; background-position: center; transition: opacity 1s; }
+.slide.active { opacity: 1; }
+.overlay { background: rgba(0,0,0,0.5); height: 100%; display: flex; align-items: center; padding: 20px; }
+.hero-text { color: #fff; max-width: 500px; }
+.hero-text h1 { font-size: 40px; margin: 0 0 15px; }
+.hero-text p { font-size: 18px; margin: 0 0 20px; }
+.hero-text a { background: #8D4E31; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+section { padding: 50px 0; }
+h2 { text-align: center; font-size: 32px; margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card { background: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+.card img { width: 100%; height: 150px; object-fit: cover; }
+.card div { padding: 15px; }
+.card h3 { margin: 0 0 10px; font-size: 20px; }
+.card p { margin: 0 0 10px; color: #666; }
+.price { color: #8D4E31; font-weight: bold; }
+footer { background: #333; color: #fff; padding: 40px 0 20px; }
+footer a { color: #ccc; text-decoration: none; }
+footer a:hover { color: #fff; }
+.contact-logos { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+.contact-logos img { max-width: 100px; height: auto; }
+@media (max-width: 768px) {
+  nav { display: none; }
+  .hamburger { display: block; }
+  .mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: #fff; padding: 5px 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .mobile-menu.active { display: block; }
+  .mobile-menu ul { list-style: none; padding: 0; }
+  .mobile-menu li { margin: 5px 0; }
+  .hero { height: 350px; }
+  .hero-text h1 { font-size: 28px; }
+  .social img { max-width: 20px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+      <a href="#" class="logo">Oma's Cafe</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a href="https://facebook.com" class="social"><img src="images/facebook-13.png" alt="Facebook"></a>
+        <a href="https://instagram.com" class="social"><img src="images/insta.png" alt="Instagram"></a>
+        <a href="https://twitter.com" class="social"><img src="images/x.png" alt="Twitter"></a>
+        <span class="hamburger">☰</span>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li style="border-top: 1px solid #ddd; padding-top: 5px;">
+      </li>
+    </ul>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1280');">
+    <div class="overlay">
+      <div class="container">
+        <div class="hero-text">
+          <h1>Authentic Nigerian Cuisine</h1>
+          <p>Enjoy the rich flavors of Nigeria with a modern twist.</p>
+          <a href="#menu">View Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="menu" style="background: #f9f9f9;">
+  <div class="container">
+    <h2>Menu Highlights</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/spaghetti.jpg" alt="Main Dishes">
+        <div>
+          <h3>Main Dishes</h3>
+          <p>Authentic Nigerian flavors.</p>
+          <p class="price">From ₦3,500</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/Grilled Chicken Salad.jpg" alt="Appetizers">
+        <div>
+          <h3>Appetizers</h3>
+          <p>Delicious small bites.</p>
+          <p class="price">From ₦1,800</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/smoothie.jpg" alt="Drinks">
+        <div>
+          <h3>Drinks</h3>
+          <p>Traditional beverages.</p>
+          <p class="price">From ₦1,200</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grilled chicken.jpg" alt="Desserts">
+        <div>
+          <h3>Desserts</h3>
+          <p>Sweet treats.</p>
+          <p class="price">From ₦1,500</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">Oma's Cafe started in 2018 in Lagos, bringing authentic Nigerian flavors with a modern touch. Our chef, Omachoko Idoko, combines traditional recipes with global techniques to create a unique dining experience.</p>
+  </div>
+</section>
+
+<section id="contact" style="background: #f9f9f9;">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <div style="flex: 1; min-width: 300px;">
+        <form style="background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <label style="display: block; margin-bottom: 5px;">Name</label>
+          <input type="text" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your name">
+          <label style="display: block; margin-bottom: 5px;">Email</label>
+          <input type="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your email">
+          <label style="display: block; margin-bottom: 5px;">Message</label>
+          <textarea style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your message" rows="4"></textarea>
+          <button type="submit" style="background: #8D4E31; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; width: 100%;">Send</button>
+        </form>
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <div style="background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <p><strong>Address:</strong> 15 Admiralty Way, Lekki, Lagos</p>
+          <p><strong>Phone:</strong> +234 812 345 6789</p>
+          <p><strong>Email:</strong> info@omascafe.com</p>
+          <p><strong>Hours:</strong> Mon-Fri: 10 AM - 10 PM</p>
+          <div class="contact-logos">
+            <a href="https://facebook.com/omascafe"><img src="images/facebook-13.png" alt="Facebook Page"></a>
+            <a href="https://facebook.com/groups/omascafefans"><img src="images/facebook-13.png" alt="Facebook Group"></a>
+            <a href="https://instagram.com/omascafe"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://twitter.com/omascafe"><img src="images/x.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <div>
+        <a href="#" class="logo">Oma's Cafe</a>
+        <p style="color: #ccc;">Rich Nigerian flavors.</p>
+      </div>
+      <div>
+        <h3 style="color: #fff; margin-bottom: 15px;">Links</h3>
+        <p><a href="#home">Home</a></p>
+        <p><a href="#menu">Menu</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div>
+        <h3 style="color: #fff; margin-bottom: 15px;">Contact</h3>
+        <p style="color: #ccc;">15 Admiralty Way, Lekki, Lagos</p>
+        <p style="color: #ccc;">+234 812 345 6789</p>
+        <p style="color: #ccc;">info@omascafe.com</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 30px; color: #ccc;">© 2025 Oma's Cafe</p>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.hamburger').onclick = function() {
+  document.querySelector('.mobile-menu').classList.toggle('active');
+};
+var slides = document.querySelectorAll('.slide'), current = 0;
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+setInterval(function() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 5000);
+</script>
+</body>
+</html>
